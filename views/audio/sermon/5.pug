@@ -1,0 +1,103 @@
+extends ../../layout
+block content
+
+  .showcase1
+    .container
+      .row
+        .col.s12
+          h2.bold.center.white-text #{translation.SUNDAY_SERMON}
+
+  .sermon-wrapper
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_27}
+        h5.grey-text #{translation.APRIL} 29, 2018 | #{translation.TITUS} 1:5-9 
+          a.bold.grey-text(href='https://archive.org/download/4050184/405_0184.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050184/405_0184.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_26}
+        h5.grey-text #{translation.APRIL} 22, 2018 | #{translation.TITUS} 1:1-4 
+          a.bold.grey-text(href='https://archive.org/download/4050182/405_0182.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050182/405_0182.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_25}
+        h5.grey-text #{translation.APRIL} 15,  2018 | #{translation.TITUS} 
+          a.bold.grey-text(href='https://archive.org/download/4050179/405_0179.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050179/405_0179.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_24}
+        h5.grey-text #{translation.APRIL} 8, 2018 | #{translation.ICORINTHIANS} 15 
+          a.bold.grey-text(href='https://archive.org/download/4050177/405_0177.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050177/405_0177.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_23}
+        h5.grey-text #{translation.APRIL} 1, 2018 | #{translation.MATTHEW} 21 
+          a.bold.grey-text(href='https://archive.org/download/4050175/405_0175.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050175/405_0175.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_22}
+        h5.grey-text #{translation.MARCH} 25, 2018 | #{translation.PHILIPPIANS} 4 
+          a.bold.grey-text(href='https://archive.org/download/4050174/405_0174.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050174/405_0174.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_21}
+        h5.grey-text #{translation.MARCH} 18, 2018 | #{translation.PHILIPPIANS} 3 
+          a.bold.grey-text(href='https://archive.org/download/4050172/405_0172.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050172/405_0172.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_20}
+        h5.grey-text #{translation.MARCH} 11, 2018 | #{translation.PHILIPPIANS} 2 
+          a.bold.grey-text(href='https://archive.org/download/4050170/405_0170.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050170/405_0170.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_19}
+        h5.grey-text #{translation.MARCH} 4, 2018 | #{translation.PHILIPPIANS} 1:12-30 
+          a.bold.grey-text(href='https://archive.org/download/4050169/405_0169.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050169/405_0169.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_18}
+        h5.grey-text #{translation.FEBRUARY} 25, 2018 | #{translation.PHILIPPIANS} 1 
+          a.bold.grey-text(href='https://archive.org/download/4050167/405_0167.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050167/405_0167.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+
+  .container.center
+    ul.pagination
+      li.waves-effect
+        a(href='/audio/sermon/4/')
+          i.material-icons chevron_left
+      li.waves-effect
+        a(href='/audio/sermon') 1
+      li.waves-effect
+        a(href='/audio/sermon/2/') 2
+      li.waves-effect
+        a(href='/audio/sermon/3/') 3
+      li.waves-effect
+        a(href='/audio/sermon/4/') 4
+      li.waves-effect.active
+        a(href='/audio/sermon/5/') 5
+      li.waves-effect
+        a(href='/audio/sermon/6/') 6
+      li.waves-effect
+        a(href='/audio/sermon/7/') 7
+      li.waves-effect
+        a(href='/audio/sermon/6/')
+          i.material-icons chevron_right

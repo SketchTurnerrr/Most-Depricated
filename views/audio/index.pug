@@ -1,0 +1,38 @@
+extends ../layout
+block content
+  
+
+  .showcase1
+    .container
+      .row
+        .col.s12
+          h2.bold.center.white-text #{translation.AUDIO}
+  .container
+    .row
+      .col.s12.m4
+        .card
+          .card-image
+            img(src='../images/sample.jpg')
+            span.card-title.bold #{translation.SUNDAY_SERMON}
+          .card-content
+            p #{translation.SUNDAY_SERMON_SUB}
+          .card-action
+            a(href='/audio/sermon/') #{translation.LISTEN}
+      .col.s12.m4
+        .card
+          .card-image
+            img( src='../images/sample.jpg')
+            span.card-title.bold #{translation.BIBLE_STUDY}
+          .card-content
+            p #{translation.BIBLE_SUB}
+          .card-action
+            a(href='/audio/bible-study') #{translation.LISTEN}
+      .col.s12.m4
+        .card
+          .card-image
+            img(src='../images/sample.jpg')
+            span.card-title.bold #{translation.COLLEGE}
+          .card-content
+            p #{translation.COLLEGE_SUB}
+          .card-action
+            a(href='/audio/college') #{translation.LISTEN}

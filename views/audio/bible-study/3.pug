@@ -1,0 +1,104 @@
+extends ../../layout
+block content
+
+  .showcase1
+    .container
+      .row
+        .col.s12
+          h2.bold.center.white-text Tuesday Bible Study
+  
+  .sermon-wrapper
+    .row
+      .col.s12
+        h3.bold #{translation.TBS_27}
+        h5.grey-text #{translation.JULY} 12, 2018 
+          a.bold.grey-text(href='https://archive.org/download/4050215/405_0215.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050215/405_0215.mp3', type='audio/mpeg') Your browser does not support the audio element.
+
+    .row
+      .col.s12
+        h3.bold #{translation.TBS_26}
+        h5.grey-text #{translation.JULY} 12, 2018 
+          a.bold.grey-text(href='https://archive.org/download/4050215/405_0215.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050215/405_0215.mp3', type='audio/mpeg') Your browser does not support the audio element.
+        
+    .row
+      .col.s12
+        h3.bold #{translation.TBS_25}
+        h5.grey-text #{translation.JULY} 5, 2018 
+          a.bold.grey-text(href='https://archive.org/download/4050213/405_0213.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050213/405_0213.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TBS_24}
+        h5.grey-text #{translation.JUNE} 28, 2018 
+          a.bold.grey-text(href='https://archive.org/download/4050211/405_0211.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050211/405_0211.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TBS_23}
+        h5.grey-text #{translation.JUNE} 14, 2018 
+          a.bold.grey-text(href='https://archive.org/download/4050208/405_0208.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050208/405_0208.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TBS_22}
+        h5.grey-text #{translation.JUNE} 7, 2018 
+          a.bold.grey-text(href='https://archive.org/download/4050201/405_0201.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050201/405_0201.mp3', type='audio/mpeg') Your browser does not support the audio element.
+
+    .row
+      .col.s12
+        h3.bold #{translation.TBS_21}
+        h5.grey-text #{translation.MAY} 31, 2018 
+          a.bold.grey-text(href='https://archive.org/download/4050196/405_0196.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050196/405_0196.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TBS_20}
+        h5.grey-text #{translation.MAY} 17, 2018 
+          a.bold.grey-text(href='https://archive.org/download/4050192/405_0192.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050192/405_0192.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TBS_19}
+        h5.grey-text #{translation.MAY} 10, 2018 
+          a.bold.grey-text(href='https://archive.org/download/4050189/405_0189.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050189/405_0189.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TBS_18}
+        h5.grey-text #{translation.APRIL} 26, 2018 
+          a.bold.grey-text(href='https://archive.org/download/40501805/405_01805.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/40501805/405_01805.mp3', type='audio/mpeg') Your browser does not support the audio element.
+
+  .container.center
+    ul.pagination
+      li.waves-effect
+        a(href='/audio/bible-study/2/')
+          i.material-icons chevron_left
+      li.waves-effect
+        a(href='/audio/bible-study/') 1
+      li.waves-effect
+        a(href='/audio/bible-study/2/') 2
+      li.waves-effect.active
+        a(href='/audio/bible-study/3/') 3
+      li.waves-effect
+        a(href='/audio/bible-study/4/') 4
+      li.waves-effect
+        a(href='/audio/bible-study/5/') 5
+      li.waves-effect
+        a(href='/audio/bible-study/4/')
+          i.material-icons chevron_right
+
+  
+
+  
+
+  block append scripts

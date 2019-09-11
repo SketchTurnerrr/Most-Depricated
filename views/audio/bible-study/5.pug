@@ -1,0 +1,84 @@
+extends ../../layout
+block content
+
+  .showcase1
+    .container
+      .row
+        .col.s12
+          h2.bold.center.white-text Tuesday Bible Study
+  
+  .sermon-wrapper
+    .row
+      .col.s12
+        h3.bold #{translation.TBS_7}
+        h5.grey-text December 7, 2017  
+          a.bold.grey-text(href='https://archive.org/download/4050138/405_0138.mp3', download='') Download
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050138/405_0138.mp3', type='audio/mpeg') Your browser does not support the audio element.
+        
+    .row
+      .col.s12
+        h3.bold #{translation.TBS_6}
+        h5.grey-text November 30, 2017 
+          a.bold.grey-text(href='https://archive.org/download/4050132/405_0132.mp3', download='') Download
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050132/405_0132.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TBS_5}
+        h5.grey-text November 23,  2017
+          a.bold.grey-text(href='https://archive.org/download/4050127/4050127.mp3', download='') Download
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050127/4050127.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TBS_4}
+        h5.grey-text November 16, 2017 
+          a.bold.grey-text(href='https://archive.org/download/4050124/4050124.mp3', download='') Download
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050124/4050124.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TBS_3}
+        h5.grey-text November 9, 2017 
+          a.bold.grey-text(href='https://archive.org/download/ThursdayNov9/thursday%20nov%209.mp3', download='') Download
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/ThursdayNov9/thursday%20nov%209.mp3', type='audio/mpeg') Your browser does not support the audio element.
+
+    .row
+      .col.s12
+        h3.bold #{translation.TBS_2}
+        h5.grey-text October 19, 2017 
+          a.bold.grey-text(href='https://archive.org/download/4050113/405_0113.mp3', download='') Download
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050113/405_0113.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TBS_1}
+        h5.grey-text October 12, 2017 
+          a.bold.grey-text(href='https://archive.org/download/4050104/405_0104.mp3', download='') Download
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050104/405_0104.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+
+  .container.center
+    ul.pagination
+      li
+        a(href='/audio/bible-study/4/')
+          i.material-icons chevron_left
+      li.waves-effect
+        a(href='/audio/bible-study/') 1
+      li.waves-effect
+        a(href='/audio/bible-study/2/') 2
+      li.waves-effect
+        a(href='/audio/bible-study/3/') 3
+      li.waves-effect
+        a(href='/audio/bible-study/4/') 4
+      li.waves-effect.active
+        a(href='/audio/bible-study/5/') 5
+      li.waves-effect.disabled
+        a(href='#!')
+          i.material-icons chevron_right
+
+  
+
+  
+
+  block append scripts

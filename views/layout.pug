@@ -1,0 +1,116 @@
+doctype html
+html
+  head
+    // Global site tag (gtag.js) - Google Analytics
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-122115964-1')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-122115964-1');
+
+    title #{translation.SITE_TITLE}
+    link(rel='stylesheet', href='/dist/style.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css')
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:300,400")
+    link(rel="shortcut icon" type="image/png" href="/images/icons/doughnut.png")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    meta(name="description" content="Bridge Church in Krivoy Rog")
+  body
+    block header
+    
+      ul#dropdown.dropdown-content
+        li
+          a.black-text(href='/?clang=en') English
+        li
+          a.black-text(href='/?clang=ua') Українська
+        li
+          a.black-text(href='/?clang=ru') Русский
+
+      ul#dropdown1.dropdown-content
+        li
+          a(href='/?clang=en') English
+        li
+          a(href='/?clang=ua') Українська
+        li
+          a(href='/?clang=ru') Русский
+
+      nav.z-depth-0
+        .nav-wrapper
+          .row
+            .col.s2
+              .container
+                a.brand-logo.black-text(href='/') #{translation.LOGO}
+                a.button-collapse(href='#', data-activates='mobile-demo')
+                  i.material-icons.black-text menu
+            .col.s10
+              .container
+                ul.hide-on-med-and-down.right
+                  li
+                    a.black-text(href='/ministries/') #{translation.MINISTRIES}
+                  li
+                    a.black-text(href='/audio/') #{translation.AUDIO}
+                  li
+                    a.black-text(href='/gallery/') #{translation.GALLERY}
+                  li
+                    a.black-text(href='/about/') #{translation.ABOUT}
+                  li
+                    a.black-text.dropdown-button(href='#!', data-activates='dropdown') #{translation.LANG}
+                      i.material-icons.right arrow_drop_down
+                
+              ul#mobile-demo.side-nav
+                li
+                  a(href='/ministries/') #{translation.MINISTRIES}
+                li
+                  a(href='/audio/') #{translation.AUDIO}
+                li
+                  a(href='/gallery/') #{translation.GALLERY}
+                li
+                  a(href='/about/') #{translation.ABOUT}
+                li
+                  a.black-text.dropdown-button(href='#!', data-activates='dropdown1') #{translation.LANG}
+                    i(style={'line-height': '30px !important', 'padding-right':'140px'}).material-icons.right arrow_drop_down
+                
+          
+
+
+
+                
+
+
+    block messages
+      if locals.flashes
+        .inner
+          .flash-messages
+            - const categories = Object.keys(locals.flashes)
+            each category in categories
+              each message in flashes[category]
+                .flash(class=`flash--${category}`)
+                  p.flash__text!= message
+                  button.flash__remove(onClick="this.parentElement.remove()") &times;
+    .content
+      block content
+
+    block footer
+      .container
+        .row
+          .col.s12
+            //- h5 footer
+
+    block scripts
+      script(type='text/javascript', src='https://code.jquery.com/jquery-3.2.1.min.js')
+      
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js')
+      script.
+        $(document).ready(function() {
+          $(".button-collapse").sideNav();
+          //- $(".parallax").parallax();
+          $(".dropdown-button").dropdown();
+
+          $('#textarea1').trigger('autoresize');
+        });
+
+      
+
+

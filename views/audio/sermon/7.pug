@@ -1,0 +1,84 @@
+extends ../../layout
+block content
+
+  .showcase1
+    .container
+      .row
+        .col.s12
+          h2.bold.center.white-text #{translation.SUNDAY_SERMON}
+
+  .sermon-wrapper
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_7}
+        h5.grey-text #{translation.DECEMBER} 3, 2017 | #{translation.LUKE} 22:66-23:25 
+          a.bold.grey-text(href='https://archive.org/download/4050135/405_0135.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050135/405_0135.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_6}
+        h5.grey-text #{translation.NOVEMBER} 26, 2017 | #{translation.LUKE} 22:47-65 
+          a.bold.grey-text(href='https://archive.org/download/4050128/405_0128.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050128/405_0128.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_5}
+        h5.grey-text #{translation.NOVEMBER} 12, 2017 | #{translation.LUKE} 21 
+          a.bold.grey-text(href='https://archive.org/download/4050122/405_0122.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050122/405_0122.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_4}
+        h5.grey-text #{translation.NOVEMBER} 5, 2017 | #{translation.LUKE} 20:27-21:4
+          a.bold.grey-text(href='https://archive.org/download/4050118/405_0118.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050118/405_0118.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_3}
+        h5.grey-text #{translation.OCTOBER} 22, 2017 | #{translation.LUKE} 19-20 
+          a.bold.grey-text(href='https://archive.org/download/4050114/4050114.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050114/4050114.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_2}
+        h5.grey-text #{translation.OCTOBER} 15, 2017 | #{translation.LUKE} 19:28-44
+          a.bold.grey-text(href='https://archive.org/download/4050108/405_0108.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050108/405_0108.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_1} 
+        h5.grey-text #{translation.OCTOBER} 8, 2017 | #{translation.LUKE} 19:11-27 
+          a.bold.grey-text(href='https://archive.org/download/4050102/405_0102.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050102/405_0102.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    
+    
+
+  .container.center
+    ul.pagination
+      li.waves-effect
+        a(href='/audio/sermon/6/')
+          i.material-icons chevron_left
+      li.waves-effect
+        a(href='/audio/sermon') 1
+      li.waves-effect
+        a(href='/audio/sermon/2/') 2
+      li.waves-effect
+        a(href='/audio/sermon/3/') 3
+      li.waves-effect
+        a(href='/audio/sermon/4/') 4
+      li.waves-effect
+        a(href='/audio/sermon/5/') 5
+      li.waves-effect
+        a(href='/audio/sermon/6/') 6
+      li.waves-effect.active
+        a(href='/audio/sermon/7/') 7
+      li.disabled
+        a(href='#!')
+          i.material-icons chevron_right
