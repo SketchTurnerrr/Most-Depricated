@@ -8,5 +8,6 @@ exports.homePage = (req, res) => {
 exports.emailPosted = async (req, res) => {
 	const store = new Store(req.body);
 	await store.save();
+	req.flash('success');
 	res.redirect('/');
 };
