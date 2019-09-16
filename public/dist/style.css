@@ -19,11 +19,14 @@ nav ul a:hover {
 }
 
 section {
-	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/main.jpg');
+	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/main.webp');
 	min-height: 700px;
 	background-size: cover;
 	background-position: center;
-	/* background-repeat: no-repeat; */
+}
+
+section .col.s12 {
+	padding-top: 150px;
 }
 
 p {
