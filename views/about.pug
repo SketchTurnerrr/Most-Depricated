@@ -5,10 +5,16 @@ block content
     .row
       .col.s6
         span
-          img.responsive-img.circle.right(src='../images/Daryl.webp', alt='',width='225px').
+          picture.right
+            source.responsive-img.circle(srcset='../images/Daryl.webp', type='image/webp', alt='image', width='290')
+            source.responsive-img.circle(srcset='../images/Daryl.png', type='image/png', alt='image', width='290')
+            img.responsive-img.circle(src='../images/Daryl.png', alt='image', width='290')
       .col.s6
         span
-          img.responsive-img.circle(src='../images/Molly.webp', alt='', width='225px')
+          picture
+            source.responsive-img.circle(srcset='../images/Molly.webp', type='image/webp', alt='image', width='290')
+            source.responsive-img.circle(srcset='../images/Molly.png', type='image/png', alt='image', width='290')
+            img.responsive-img.circle(src='../images/Molly.png', alt='image', width='290')
 
   .container
     h4.center 
@@ -26,15 +32,24 @@ block content
     .row.center
       .col.m4.s12
         span
-          img.responsive-img.circle(src='../images/AdamLuba.webp', alt='', width='290')
+          picture
+            source.responsive-img.circle(srcset='../images/AdamLuba.webp', type='image/webp', alt='image', width='290')
+            source.responsive-img.circle(srcset='../images/AdamLuba.jpg', type='image/jpg', alt='image', width='290')
+            img.responsive-img.circle(src='../images/AdamLuba.jpg', alt='image', width='290')
           h4 #{translation.ADAMLUBA}
       .col.m4.s12
         span
-          img.responsive-img.circle(src='../images/Vika.webp', alt='', width='290')
-          h4 #{translation.VIKA}
+          picture
+            source.responsive-img.circle(srcset='../images/Vika.webp', type='image/webp', alt='image', width='290')
+            source.responsive-img.circle(srcset='../images/Vika.jpg', type='image/jpg', alt='image', width='290')
+            img.responsive-img.circle(src='../images/Vika.jpg', alt='image', width='290')
+            h4 #{translation.VIKA}
       .col.m4.s12
         span
-          img.responsive-img.circle(src='../images/Roma.webp', alt='', width='290')
+          picture
+            source.responsive-img.circle(srcset='../images/Roma.webp', type='image/webp', alt='image', width='290')
+            source.responsive-img.circle(srcset='../images/Roma.jpg', type='image/jpg', alt='image', width='290')
+            img.responsive-img.circle(src='../images/Roma.jpg', alt='image', width='290')
           h4 #{translation.ROMA}
       
   .container
