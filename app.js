@@ -41,7 +41,8 @@ app.use(
 	geolang({
 		defaultLang: [ 'en' ],
 		siteLangs: [ 'en', 'ru', 'ua' ],
-		cookieLangName: 'ulang'
+		cookieLangName: 'ulang',
+		browserEnable: 'true'
 	})
 );
 
