@@ -6,8 +6,7 @@ nav {
 }
 
 nav i.material-icons {
-	line-height: 95px !important;
-	margin-left: 0px !important;
+	line-height: 100px !important;
 }
 
 nav ul a:hover {
@@ -129,5 +128,12 @@ audio {
 	.col.s8.offset-s2 {
 		margin-left: 0px !important;
 		width: 100% !important;
+	}
+	nav i.material-icons {
+		line-height: 100px !important;
+	}
+	#mobile-demo li a i {
+		line-height: 35px !important;
+		padding-right: 90px;
 	}
 }
