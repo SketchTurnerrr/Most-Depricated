@@ -1,142 +1,191 @@
 nav {
-	height: 106px !important;
-	background-color: transparent !important;
-	line-height: 106px !important;
-	font-weight: 700;
+  height: 106px !important;
+  background-color: transparent !important;
+  line-height: 106px !important;
+  font-weight: 700;
 }
 
 nav i.material-icons {
-	line-height: 100px !important;
+  line-height: 100px !important;
 }
 
 nav ul a:hover {
-	background-color: transparent !important;
+  background-color: transparent !important;
 }
 
 .cardWrapper > .container {
-	width: 85% !important;
+  width: 85% !important;
 }
 
 section {
-	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/main.webp');
-	min-height: 700px;
-	background-size: cover;
-	background-position: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../images/main.webp");
+  min-height: 700px;
+  background-size: cover;
+  background-position: center;
 }
 
 section .col.s12 {
-	padding-top: 150px;
+  padding-top: 150px;
 }
 
 p {
-	color: #717b86;
-	font-weight: 500;
-	/* font-family: 'Open Sans', sans-serif; */
+  color: #717b86;
+  font-weight: 500;
+  /* font-family: 'Open Sans', sans-serif; */
 }
 
 .col.s12.m6 p {
-	margin: auto;
+  margin: auto;
 }
 
 .col.s12.m6 h5:nth-child(-n + 3) {
-	margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .col.s12.m6 h5:nth-child(1) {
-	margin-top: 50px;
+  margin-top: 50px;
 }
 
 .col.s8.offset-s2 h5 {
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .gmap {
-	margin-top: 50px !important;
+  margin-top: 50px !important;
 }
 
 .card p {
-	color: #717b86;
-	font-weight: 400;
+  color: #717b86;
+  font-weight: 400;
 }
 
 .card .card-title {
-	font-size: 18px !important;
+  font-size: 18px !important;
 }
 
 .grey-text {
-	color: #717b86;
-	font-weight: 500;
+  color: #717b86;
+  font-weight: 500;
 }
 
 .contrast {
-	text-shadow: 1px 1px 2px black;
+  text-shadow: 1px 1px 2px black;
 }
 
 .flow-text {
-	font-size: 1.48rem !important;
+  font-size: 1.48rem !important;
 }
 
 .bold {
-	font-weight: 700 !important;
+  font-weight: 700 !important;
 }
 
 .showcase1 {
-	background: #0f2027; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
-	background: linear-gradient(
-		to right,
-		#2c5364,
-		#203a43,
-		#0f2027
-	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  background: linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .showcase1 h2 {
-	padding-top: 300px;
-	height: 400px;
+  padding-top: 300px;
+  height: 400px;
 }
 .sermon-wrapper {
-	padding: 0px 100px;
+  padding: 0px 100px;
 }
 audio {
-	outline: none;
-	width: 65%;
+  outline: none;
+  width: 65%;
 }
 .col.s12.m6 audio {
-	width: 100%;
-	padding-top: 1rem;
+  width: 100%;
+  padding-top: 1rem;
 }
 .pagination {
-	padding: 50px 0px;
+  padding: 50px 0px;
 }
+
+/* flashes */
+.flash {
+  margin-left: 200px;
+  margin-right: 200px;
+  background: rgb(212, 212, 212);
+  margin-bottom: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.flash__text {
+  flex: 1;
+  color: black;
+}
+.flash__remove {
+  background: none;
+  border: 0;
+}
+.flash__remove:hover {
+  color: grey;
+}
+
+.flash--error {
+  background: linear-gradient(
+    20deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(200, 0, 0, 1) 100%
+  );
+}
+.flash--info {
+  background: linear-gradient(
+    35deg,
+    rgba(241, 231, 103, 1) 0%,
+    rgba(254, 182, 69, 1) 100%
+  );
+}
+.flash p {
+  margin: 0;
+}
+
 @media screen and (max-width: 900px) {
-	audio {
-		width: 100%;
-	}
-	.sermon-wrapper {
-		padding: 0px 10px;
-	}
-	h3 {
-		font-size: 2rem !important;
-	}
-	h5,
-	a {
-		font-size: 1.3rem !important;
-	}
-	h6 a {
-		font-size: 1rem !important;
-	}
-	.gmap iframe {
-		width: 300px;
-	}
-	.col.s8.offset-s2 {
-		margin-left: 0px !important;
-		width: 100% !important;
-	}
-	nav i.material-icons {
-		line-height: 100px !important;
-	}
-	#mobile-demo li a i {
-		line-height: 35px !important;
-		padding-right: 90px;
-	}
+  audio {
+    width: 100%;
+  }
+  .sermon-wrapper {
+    padding: 0px 10px;
+  }
+  h3 {
+    font-size: 2rem !important;
+  }
+  h5,
+  a {
+    font-size: 1.3rem !important;
+  }
+  h6 a {
+    font-size: 1rem !important;
+  }
+  .gmap iframe {
+    width: 300px;
+  }
+  .col.s8.offset-s2 {
+    margin-left: 0px !important;
+    width: 100% !important;
+  }
+  nav i.material-icons {
+    line-height: 100px !important;
+  }
+  #mobile-demo li a i {
+    line-height: 35px !important;
+    padding-right: 90px;
+  }
+}
+
+@media only screen and (max-width: 775px) {
+  .flash {
+    margin: 10px;
+  }
 }

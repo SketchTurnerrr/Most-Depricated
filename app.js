@@ -39,8 +39,8 @@ app.use(
 
 app.use(
 	geolang({
-		defaultLang: [ 'en' ],
-		siteLangs: [ 'en', 'ru', 'ua' ],
+		defaultLang: ['en'],
+		siteLangs: ['en', 'ru', 'ua'],
 		cookieLangName: 'ulang',
 		browserEnable: 'true'
 	})
@@ -49,7 +49,7 @@ app.use(
 app.use(
 	i18n({
 		translationsPath: path.join(__dirname, 'i18n'),
-		siteLangs: [ 'en', 'ru', 'ua' ],
+		siteLangs: ['en', 'ru', 'ua'],
 		textsVarName: 'translation'
 	})
 );

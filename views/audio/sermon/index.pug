@@ -6,8 +6,15 @@ block content
       .row
         .col.s12
           h2.bold.center.white-text #{translation.SUNDAY_SERMON}
-  
+
   .sermon-wrapper
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_96}
+        h5.grey-text #{translation.OCTOBER} 27, 2019 | 
+          a.bold.grey-text(href='https://archive.org/download/405309/405_309.ogg', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/405309/405_309.ogg', type='audio/mpeg') Your browser does not support the audio element.
+
     .row
       .col.s12
         h3.bold #{translation.TITLE_95}
