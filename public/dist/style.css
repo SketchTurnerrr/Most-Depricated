@@ -102,6 +102,9 @@ audio {
   outline: none;
   width: 65%;
 }
+.sermon-desc-width {
+  width: 65%;
+}
 .col.s12.m6 audio {
   width: 100%;
   padding-top: 1rem;
