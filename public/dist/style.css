@@ -19,7 +19,7 @@ nav ul a:hover {
 
 section {
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("../images/main.webp");
+    url('../images/main.webp');
   min-height: 700px;
   background-size: cover;
   background-position: center;
@@ -152,6 +152,20 @@ audio {
 }
 .flash p {
   margin: 0;
+}
+
+.footer {
+  border-top: 1px solid #e7e9eb;
+  padding: 35px 0px 25px;
+  /* width: 100% !important; */
+  margin: 0px 15px !important;
+}
+
+.footer h3 {
+  font-weight: 600;
+}
+.footer a {
+  color: inherit;
 }
 
 @media screen and (max-width: 900px) {
