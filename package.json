@@ -22,7 +22,7 @@
     "es6-promisify": "6.0.2",
     "express": "4.17.1",
     "express-session": "^1.17.0",
-    "express-validator": "^6.3.1",
+    "express-validator": "^6.4.0",
     "geolang-express": "^1.0.0",
     "glob": "7.1.6",
     "html-to-text": "5.1.1",
