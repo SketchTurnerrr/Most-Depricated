@@ -1,0 +1,100 @@
+extends ../../layout
+block content
+
+  .showcase1
+    .container
+      .row
+        .col.s12
+          h2.bold.center.white-text #{translation.SUNDAY_SERMON}
+  
+  .sermon-wrapper
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_92}
+        h5.grey-text #{translation.SEPTEMBER} 22, 2019 | #{translation.DANIEL} 3 
+          a.bold.grey-text(href='https://archive.org/download/4050304/405_0304.ogg', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050304/405_0304.ogg', type='audio/mpeg') Your browser does not support the audio element.
+
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_93}
+        h5.grey-text #{translation.SEPTEMBER} 29, 2019 | #{translation.DANIEL} 6 
+          a.bold.grey-text(href='https://archive.org/download/4050305/405_0305.ogg', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050305/405_0305.ogg', type='audio/mpeg') Your browser does not support the audio element.
+
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_94}
+        h5.grey-text #{translation.OCTOBER} 6, 2019 | #{translation.HABAKKUK} 1-3 
+          a.bold.grey-text(href='https://archive.org/download/4050306/405_0306.ogg', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050306/405_0306.ogg', type='audio/mpeg') Your browser does not support the audio element.
+
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_95}
+        h5.grey-text #{translation.OCTOBER} 13, 2019 | #{translation.ZEPHANIAH} 1-3 
+          a.bold.grey-text(href='https://archive.org/download/4050307/405_0307.ogg', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050307/405_0307.ogg', type='audio/mpeg') Your browser does not support the audio element.
+        
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_96}
+        h5.grey-text #{translation.OCTOBER} 27, 2019 | 
+          a.bold.grey-text(href='https://archive.org/download/405309/405_309.ogg', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/405309/405_309.ogg', type='audio/mpeg') Your browser does not support the audio element.
+
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_97}
+        h5.grey-text #{translation.NOVEMBER} 3, 2019 | 
+          a.bold.grey-text(href='https://archive.org/download/audio_2019-11-03/audio_2019-11-03.ogg', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/audio_2019-11-03/audio_2019-11-03.ogg', type='audio/mpeg') Your browser does not support the audio element.
+
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_98}
+        h5.grey-text #{translation.NOVEMBER} 10, 2019 | 
+          a.bold.grey-text(href='https://archive.org/download/audio_2019-11-10/audio_2019-11-10.ogg', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/audio_2019-11-10/audio_2019-11-10.ogg', type='audio/mpeg') Your browser does not support the audio element.
+
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_99}
+        h5.grey-text #{translation.NOVEMBER} 17, 2019 | 
+          a.bold.grey-text(href='https://archive.org/download/4050313/405_0313.ogg', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050313/405_0313.ogg', type='audio/mpeg') Your browser does not support the audio element.
+
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_100}
+        h5.grey-text #{translation.NOVEMBER} 24, 2019 | 
+          a.bold.grey-text(href='https://archive.org/download/4050314/405_0314.ogg', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050314/405_0314.ogg', type='audio/mpeg') Your browser does not support the audio element.
+
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_101}
+        h5.grey-text #{translation.DECEMBER} 1, 2019 | 
+          a.bold.grey-text(href='https://archive.org/download/4050315/405_0315.ogg', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/4050315/405_0315.ogg', type='audio/mpeg') Your browser does not support the audio element.
+        
+
+
+  .container.center
+    ul.pagination
+      li.waves-effect
+        a(href='/audio/sermon/9/')
+          i.material-icons chevron_left
+      li.waves-effect
+        a(href='/audio/sermon/8/') 8
+      li
+        a(href='/audio/sermon/9/') 9
+      li.waves-effect.active
+        a(href='/audio/sermon/10/') 10
+      li.waves-effect.disabled
+        a(href='#!') ...
+      li.waves-effect
+        a(href='/audio/sermon/12/') 12
+      li.waves-effect
+        a(href='/audio/sermon/11/')
+          i.material-icons chevron_right

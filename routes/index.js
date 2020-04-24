@@ -56,6 +56,22 @@ router.get('/audio/sermon/8/', (req, res) => {
 	res.render('audio/sermon/8');
 });
 
+router.get('/audio/sermon/9/', (req, res) => {
+	res.render('audio/sermon/9');
+});
+
+router.get('/audio/sermon/10/', (req, res) => {
+	res.render('audio/sermon/10');
+});
+
+router.get('/audio/sermon/11/', (req, res) => {
+	res.render('audio/sermon/11');
+});
+
+router.get('/audio/sermon/12/', (req, res) => {
+	res.render('audio/sermon/12');
+});
+
 //	BIBLE STUDY
 router.get('/audio/bible-study/', (req, res) => {
 	res.render('audio/bible-study/index');
