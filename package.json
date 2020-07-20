@@ -21,8 +21,12 @@
     "cookie-session": "^1.4.0",
 =======
     "cookie-parser": "1.4.5",
+<<<<<<< HEAD
 >>>>>>> bff2e531edbd5241f62f98686786c275a5a6067a
     "dompurify": "2.0.10",
+=======
+    "dompurify": "2.0.12",
+>>>>>>> 45955d76633f5440d23512c323a766ae9d122aab
     "dotenv": "8.2.0",
     "es6-promisify": "6.1.1",
     "express": "4.17.1",
@@ -33,20 +37,20 @@
     "html-to-text": "5.1.1",
     "i18n": "^0.10.0",
     "i18n-express": "^1.1.3",
-    "jimp": "0.10.3",
+    "jimp": "0.14.0",
     "juice": "6.0.0",
     "moment": "2.27.0",
-    "mongoose": ">=5.9.24",
+    "mongoose": ">=5.9.25",
     "mongoose-mongodb-errors": "0.0.2",
     "multer": "1.4.2",
     "passport": "^0.4.1",
-    "pug": "2.0.4",
+    "pug": "3.0.0",
     "slugs": "0.1.3",
     "uuid": "8.2.0",
-    "validator": "13.0.0"
+    "validator": "13.1.1"
   },
   "devDependencies": {
-    "autoprefixer": "9.7.6",
+    "autoprefixer": "9.8.5",
     "nodemon": "^2.0.4"
   }
 }
