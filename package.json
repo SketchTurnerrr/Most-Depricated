@@ -16,17 +16,9 @@
     "concurrently": "^5.2.0",
     "connect-flash": "^0.1.1",
     "connect-mongo": "3.2.0",
-<<<<<<< HEAD
-    "cookie-parser": "1.4.4",
     "cookie-session": "^1.4.0",
-=======
     "cookie-parser": "1.4.5",
-<<<<<<< HEAD
->>>>>>> bff2e531edbd5241f62f98686786c275a5a6067a
-    "dompurify": "2.0.10",
-=======
     "dompurify": "2.0.12",
->>>>>>> 45955d76633f5440d23512c323a766ae9d122aab
     "dotenv": "8.2.0",
     "es6-promisify": "6.1.1",
     "express": "4.17.1",
