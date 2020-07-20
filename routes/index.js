@@ -1,11 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const HomePageController = require('../controllers/HomePageController');
+// const HomePageController = require('../controllers/HomePageController');
 
-// Do work here
+
 const { catchErrors } = require('../handlers/errorHandlers');
-router.get('/', HomePageController.homePage);
-router.post('/', catchErrors(HomePageController.emailPosted));
+// router.get('/', HomePageController.homePage);
+
+
+router.get('/', (req, res) => {
+	res.render('index');
+});
 
 router.get('/about', (req, res) => {
 	res.render('about');

@@ -1,7 +1,7 @@
 const express = require('express');
 const session = require('express-session');
 const mongoose = require('mongoose');
-const MongoStore = require('connect-mongo')(session);
+// const MongoStore = require('connect-mongo')(session);
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
@@ -33,7 +33,7 @@ app.use(
 		key: process.env.KEY,
 		resave: true,
 		saveUninitialized: true,
-		store: new MongoStore({ mongooseConnection: mongoose.connection })
+		// store: new MongoStore({ mongooseConnection: mongoose.connection })
 	})
 );
 
