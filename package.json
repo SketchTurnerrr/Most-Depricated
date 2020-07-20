@@ -41,7 +41,7 @@
     "validator": "13.0.0"
   },
   "devDependencies": {
-    "autoprefixer": "9.7.6",
+    "autoprefixer": "9.8.5",
     "nodemon": "^2.0.4"
   }
 }
