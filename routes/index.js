@@ -76,6 +76,10 @@ router.get('/audio/sermon/12/', (req, res) => {
 	res.render('audio/sermon/12');
 });
 
+router.get('/audio/sermon/13/', (req, res) => {
+	res.render('audio/sermon/13');
+});
+
 //	BIBLE STUDY
 router.get('/audio/bible-study/', (req, res) => {
 	res.render('audio/bible-study/index');

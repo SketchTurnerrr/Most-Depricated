@@ -1,0 +1,78 @@
+extends ../../layout
+block content
+
+  .showcase1
+    .container
+      .row
+        .col.s12
+          h2.bold.center.white-text #{translation.SUNDAY_SERMON}
+  
+  .sermon-wrapper
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_122}
+        h5.grey-text #{translation.JULY} 26, 2020 | 
+          a.bold.grey-text(href='https://archive.org/download/405-0337/405_0337.ogg', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/405-0337/405_0337.ogg', type='audio/mpeg') Your browser does not support the audio element.
+
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_123}
+        h5.grey-text #{translation.AUGUST} 2, 2020 | 
+          a.bold.grey-text(href='https://archive.org/download/405-0338/405_0338.ogg', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/405-0338/405_0338.ogg', type='audio/mpeg') Your browser does not support the audio element.
+
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_124}
+        h5.grey-text #{translation.AUGUST} 9, 2020 | 
+          a.bold.grey-text(href='https://archive.org/download/405-0339/405_0339.ogg', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/405-0339/405_0339.ogg', type='audio/mpeg') Your browser does not support the audio element.
+
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_125}
+        h5.grey-text #{translation.AUGUST} 16, 2020 | 
+          a.bold.grey-text(href='https://archive.org/download/405-0340/405_0340.ogg', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/405-0340/405_0340.ogg', type='audio/mpeg') Your browser does not support the audio element.
+
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_126}
+        h5.grey-text #{translation.AUGUST} 23, 2020 | 
+          a.bold.grey-text(href='https://archive.org/download/405-0341/405_0341.ogg', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/405-0341/405_0341.ogg', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_127}
+        h5.grey-text #{translation.AUGUST} 30, 2020 | 
+          a.bold.grey-text(href='https://archive.org/download/405-0342/405_0342.ogg', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/405-0342/405_0342.ogg', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_128}
+        h5.grey-text #{translation.SEPTEMBER} 6, 2020 | 
+          a.bold.grey-text(href='https://archive.org/download/405-0343/405_0343.ogg', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/405-0343/405_0343.ogg', type='audio/mpeg') Your browser does not support the audio element.
+
+
+  .container.center
+    ul.pagination
+      li.waves-effect
+        a(href='/audio/sermon/11/')
+          i.material-icons chevron_left
+      li.waves-effect
+        a(href='/audio/sermon') 1
+      li.waves-effect.disabled
+        a(href='#!') ...
+      li.waves-effect
+        a(href='/audio/sermon/11/') 11
+      li.waves-effect
+        a(href='/audio/sermon/12/') 12
+      li.waves-effect.active
+        a(href='/audio/sermon/13/') 13
+      li.waves-effect.disabled
+        a(href='#!')
+          i.material-icons chevron_right
