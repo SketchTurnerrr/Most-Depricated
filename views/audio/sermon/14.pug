@@ -1,0 +1,74 @@
+extends ../../layout
+block content
+
+  .showcase1
+    .container
+      .row
+        .col.s12
+          h2.bold.center.white-text #{translation.SUNDAY_SERMON}
+  
+  .sermon-wrapper
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_132}
+        h5.grey-text #{translation.OCTOBER} 4, 2020 | 
+          a.bold.grey-text(href='https://archive.org/download/john-p-3/John_p3.ogg', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/john-p-3/John_p3.ogg', type='audio/mpeg') Your browser does not support the audio element.
+
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_133}
+        h5.grey-text #{translation.OCTOBER} 11, 2020 | 
+          a.bold.grey-text(href='https://archive.org/download/john-2_202011/John2.ogg', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/john-2_202011/John2.ogg', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_134}
+        h5.grey-text #{translation.OCTOBER} 18, 2020 | 
+          a.bold.grey-text(href='https://archive.org/download/john-2-p-2/John2_p2.ogg', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/john-2-p-2/John2_p2.ogg', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_135}
+        h5.grey-text #{translation.OCTOBER} 25, 2020 | 
+          a.bold.grey-text(href='https://archive.org/download/john-3_202011/John3.ogg', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/john-3_202011/John3.ogg', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_136}
+        h5.grey-text #{translation.NOVEMBER} 1, 2020 | 
+          a.bold.grey-text(href='https://archive.org/download/john-3-p-2_202011/John3_p2.ogg', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/john-3-p-2_202011/John3_p2.ogg', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_137}
+        h5.grey-text #{translation.NOVEMBER} 8, 2020 | 
+          a.bold.grey-text(href='https://archive.org/download/john-4/John4.ogg', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/john-4/John4.ogg', type='audio/mpeg') Your browser does not support the audio element.
+
+
+
+
+  .container.center
+    ul.pagination
+      li.waves-effect
+        a(href='/audio/sermon/12/')
+          i.material-icons chevron_left
+      li.waves-effect
+        a(href='/audio/sermon') 1
+      li.waves-effect.disabled
+        a(href='#!') ...
+      li.waves-effect
+        a(href='/audio/sermon/12/') 12
+      li.waves-effect
+        a(href='/audio/sermon/13/') 13
+      li.waves-effect.active
+        a(href='/audio/sermon/14/') 14
+
+      li.waves-effect.disabled
+        a(href='#!')
+          i.material-icons chevron_right
