@@ -30,55 +30,9 @@ router.get('/audio/sermon/', (req, res) => {
   res.render('audio/sermon/index');
 });
 
-router.get('/audio/sermon/2/', (req, res) => {
-  res.render('audio/sermon/2');
-});
-
-router.get('/audio/sermon/3/', (req, res) => {
-  res.render('audio/sermon/3');
-});
-
-router.get('/audio/sermon/4/', (req, res) => {
-  res.render('audio/sermon/4');
-});
-
-router.get('/audio/sermon/5/', (req, res) => {
-  res.render('audio/sermon/5');
-});
-
-router.get('/audio/sermon/6/', (req, res) => {
-  res.render('audio/sermon/6');
-});
-
-router.get('/audio/sermon/7/', (req, res) => {
-  res.render('audio/sermon/7');
-});
-
-router.get('/audio/sermon/8/', (req, res) => {
-  res.render('audio/sermon/8');
-});
-
-router.get('/audio/sermon/9/', (req, res) => {
-  res.render('audio/sermon/9');
-});
-
-router.get('/audio/sermon/10/', (req, res) => {
-  res.render('audio/sermon/10');
-});
-
-router.get('/audio/sermon/11/', (req, res) => {
-  res.render('audio/sermon/11');
-});
-
-router.get('/audio/sermon/12/', (req, res) => {
-  res.render('audio/sermon/12');
-});
-
-router.get('/audio/sermon/13/', (req, res) => {
-  res.render('audio/sermon/13');
-});
-router.get('/audio/sermon/14/', (req, res) => {
-  res.render('audio/sermon/14');
+router.get('/audio/sermon/:id', (req, res) => {
+  const id = parseInt(req.params.id, 10);
+  res.render(`audio/sermon/${id}`);
 });
 
 //	BIBLE STUDY
@@ -86,20 +40,9 @@ router.get('/audio/bible-study/', (req, res) => {
   res.render('audio/bible-study/index');
 });
 
-router.get('/audio/bible-study/2/', (req, res) => {
-  res.render('audio/bible-study/2');
-});
-
-router.get('/audio/bible-study/3/', (req, res) => {
-  res.render('audio/bible-study/3');
-});
-
-router.get('/audio/bible-study/4/', (req, res) => {
-  res.render('audio/bible-study/4');
-});
-
-router.get('/audio/bible-study/5/', (req, res) => {
-  res.render('audio/bible-study/5');
+router.get('/audio/bible-study/:id', (req, res) => {
+  const id = parseInt(req.params.id, 10);
+  res.render(`audio/bible-study/${id}`);
 });
 
 // BIBLE COLLEGE

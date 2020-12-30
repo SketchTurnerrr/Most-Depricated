@@ -1,0 +1,53 @@
+extends ../../layout
+block content
+
+  .showcase1
+    .container
+      .row
+        .col.s12
+          h2.bold.center.white-text #{translation.SUNDAY_SERMON}
+  
+  .sermon-wrapper
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_142}
+        h5.grey-text #{translation.DECEMBER} 13, 2020 | 
+          a.bold.grey-text(href='https://archive.org/download/2020-12-13_20201230/2020_12_13.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/2020-12-13_20201230/2020_12_13.mp3', type='audio/mpeg') Your browser does not support the audio element.
+
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_143}
+        h5.grey-text #{translation.DECEMBER} 20, 2020 | 
+          a.bold.grey-text(href='https://archive.org/download/2020-12-20_20201230/2020_12_20.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/2020-12-20_20201230/2020_12_20.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+    .row
+      .col.s12
+        h3.bold #{translation.TITLE_144}
+        h5.grey-text #{translation.DECEMBER} 27, 2020 | 
+          a.bold.grey-text(href='https://archive.org/download/2020-12-27/2020_12_27.mp3', download='') #{translation.DWNLD}
+        audio(controls='controls', preload='metadata', src='https://archive.org/download/2020-12-27/2020_12_27.mp3', type='audio/mpeg') Your browser does not support the audio element.
+    
+
+
+
+  .container.center
+    ul.pagination
+      li.waves-effect
+        a(href='/audio/sermon/13/')
+          i.material-icons chevron_left
+      li.waves-effect
+        a(href='/audio/sermon') 1
+      li.waves-effect.disabled
+        a(href='#!') ...
+      li.waves-effect
+        a(href='/audio/sermon/13/') 13
+      li.waves-effect
+        a(href='/audio/sermon/14/') 14
+      li.waves-effect.active
+        a(href='/audio/sermon/15/') 15
+
+      li.waves-effect.disabled
+        a(href='#!')
+          i.material-icons chevron_right
