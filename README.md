@@ -1,1 +1,1 @@
-This is a refactoring of the Bridge Church website
+This is a refactoring branch of the Bridge Church website
