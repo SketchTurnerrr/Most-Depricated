@@ -6,6 +6,12 @@ module.exports = {
       colors: {
         'accent-1': '#333',
       },
+      height: {
+        vh9: '90vh',
+      },
+      zIndex: {
+        '-1': '-1',
+      },
     },
   },
   variants: {

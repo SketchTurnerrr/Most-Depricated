@@ -1,22 +1,25 @@
 import Head from 'next/head';
-import Link from 'next/link';
-import Nav from '../components/nav';
+import { i18n, Link, withTranslation } from '../i18n';
+import Navbar from './Navbar';
 
-const name = 'Narek Oganesyan';
-export const siteTitle = 'Bridge Church';
-
-export default function Layout({ children }) {
+const Layout = ({ children, t }) => {
   return (
     <>
       <Head>
         <link rel='icon' href='/favicon.ico' />
         <meta name='description' content='Bridge Church Kryvyi Rih' />
         s
-        <meta name='og:title' content={siteTitle} />
-        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='og:title' content={t('BridgeChurch')} />
+        <title>{t('BridgeChurch')}</title>
       </Head>
-      <Nav />
+      <Navbar />
       <main>{children}</main>
     </>
   );
-}
+};
+
+Layout.getInitialProps = async () => ({
+  namespacesRequired: ['common'],
+});
+
+export default withTranslation('common')(Layout);

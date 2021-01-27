@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import Head from 'next/head';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 
-export default function Listen() {
+const Listen = () => {
   return <Layout>Listen</Layout>;
-}
+};
+
+export default Listen;

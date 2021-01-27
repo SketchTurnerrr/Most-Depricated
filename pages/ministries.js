@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import Head from 'next/head';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 
-export default function Ministries() {
+const Ministries = () => {
   return <Layout>Ministries</Layout>;
-}
+};
+
+export default Ministries;
