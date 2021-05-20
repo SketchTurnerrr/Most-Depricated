@@ -16,7 +16,7 @@
     "cookie-session": "^1.4.0",
     "dotenv": "8.2.0",
     "express": "4.17.1",
-    "express-session": "^1.17.1",
+    "express-session": "^1.17.2",
     "geolang-express": "^1.0.0",
     "html-to-text": "6.0.0",
     "i18n": "^0.13.2",
