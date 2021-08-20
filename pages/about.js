@@ -4,15 +4,14 @@ import Layout from '../components/Layout';
 const About = ({ t }) => {
   return (
     <Layout>
-      {t('about')}
       <div className='flex items-center justify-center my-10'>
         <img
-          className='w-64 h-64 m-2 rounded-full'
+          className='w-40 m-2 mx-4 rounded-full h-42 lg:w-44 lg:h-44'
           src='/images/IMG_4194--min.png'
           alt='photo of Daryl'
         />
         <img
-          className='w-64 h-64 m-2 rounded-full'
+          className='w-40 m-2 mx-4 rounded-full h-42 lg:w-44 lg:h-44'
           src='/images/IMG_4194--min.png'
           alt='photo of Molly'
         />
@@ -20,30 +19,103 @@ const About = ({ t }) => {
       <section className='max-w-3xl mx-auto'>
         <div>
           <h1 className='mb-5 text-4xl font-semibold text-center'>
-            Daryl & Molly Porter
+            {t('DMP')}
           </h1>
-          <p className='p-5 mb-5 text-lg leading-relaxed text-gray-600 lg:p-0'>
-            Our pastor is Daryl Porter. He and his wife Molly are missionaries
-            from Canada. The Porters have lived in Ukraine since 2000 and in
-            Krivoy Rog since 2012. They have two adult children and five grand
-            children. One of the main goals of them living in Ukraine is to
-            establish new Evangelical free churches and help them to grow. Daryl
-            is also the Area Director for all of the EFCCM (Evangelical Free
-            Church of Canada Mission) missionaries serving in Europe. During the
-            year (October-May) the Porters lead an English club at their place.
+          <p className='p-5 mb-5 text-lg leading-relaxed text-gray-500 lg:p-0'>
+            {t('p1')}
           </p>
-          <p className='p-5 mb-5 text-lg leading-relaxed text-gray-600 lg:p-0'>
-            In the summer they also organize and teach at a 3-week Summer
-            English Institute. It needs to be mentioned that Pastor Daryl's main
-            hobby is running. All of his life he has run marathons and half
-            marathons. It helps him to discipline himself not only physically,
-            but also spiritually. How? Because in a very real sense our
-            spiritual life is a race: we are running, get tired, fall, want to
-            quit but get up and keep running until we see the finish line. We
-            keep our eyes on Jesus who ran the race before us. He never stopped
-            even though the way was hard. So we too should keep going just like
-            He did.
+          <p className='p-5 mb-5 text-lg leading-relaxed text-gray-500 lg:p-0'>
+            {t('p2')}
           </p>
+        </div>
+      </section>
+
+      <div className='flex flex-wrap items-center justify-center my-10 text-lg font-semibold'>
+        <div className='items-center text-center'>
+          <img
+            className='w-40 m-2 mx-4 rounded-full h-42 lg:w-44 lg:h-44'
+            src='/images/IMG_4194--min.png'
+            alt='photo of Daryl'
+          />
+          <span>{t('A&L')}</span>
+        </div>
+        <div className='items-center text-center'>
+          <img
+            className='w-40 m-2 mx-4 rounded-full h-42 lg:w-44 lg:h-44'
+            src='/images/IMG_4194--min.png'
+            alt='photo of Daryl'
+          />
+          <span>{t('Vika')}</span>
+        </div>
+        <div className='items-center text-center'>
+          <img
+            className='w-40 m-2 mx-4 rounded-full h-42 lg:w-44 lg:h-44'
+            src='/images/IMG_4194--min.png'
+            alt='photo of Daryl'
+          />
+          <span>{t('Roma')}</span>
+        </div>
+      </div>
+      <section className='max-w-3xl p-5 mx-auto'>
+        <div className='text-center'>
+          <h1 className='text-4xl font-semibold'>{t('WHAT_WE_BELIEVE')}</h1>
+        </div>
+        <h1 className='my-4 text-3xl font-semibold'>{t('SCRIPTURES')}</h1>
+        <p className='w-full mb-10 text-lg text-gray-500'>
+          {t('SCRIPTURES_P')}
+        </p>
+        <h1 className='my-4 text-3xl font-semibold'>{t('GOD')}</h1>
+        <p className='w-full mb-10 text-lg text-gray-500'>{t('GOD_P')}</p>
+        <h1 className='my-4 text-3xl font-semibold'>{t('JC')}</h1>
+        <p className='w-full mb-10 text-lg text-gray-500'>{t('JC_P')}</p>
+        <h1 className='my-4 text-3xl font-semibold'>{t('HS')}</h1>
+        <p className='w-full mb-10 text-lg text-gray-500'>{t('HS_P')}</p>
+        <h1 className='my-4 text-3xl font-semibold'>{t('HUMANITY')}</h1>
+        <p className='w-full mb-10 text-lg text-gray-500'>{t('HUMANITY_P')}</p>
+        <h1 className='my-4 text-3xl font-semibold'>{t('CHURCH')}</h1>
+        <p className='w-full mb-10 text-lg text-gray-500'>{t('CHURCH_P')}</p>
+        <h1 className='my-4 text-3xl font-semibold'>{t('DISCIPLESHIP')}</h1>
+        <p className='w-full mb-10 text-lg text-gray-500'>
+          {t('DISCIPLESHIP_P')}
+        </p>
+        <h1 className='my-4 text-3xl font-semibold'>{t('FUTURE')}</h1>
+        <p className='w-full mb-10 text-lg text-gray-500'>{t('FUTURE_P')}</p>
+
+        <div className='w-3/4 pl-4 mx-auto bg-blue-100 border-l-4 border-blue-500 rounded'>
+          <p>{t('BLOCKQUOTE')}</p>
+          <p className='pl-5'>{t('BLOCKQUOTE1')}</p>
+          <p className='pl-5'>{t('BLOCKQUOTE2')}</p>
+        </div>
+      </section>
+      <h1 className='max-w-5xl mx-auto mt-10 text-3xl font-semibold text-center lg:text-4xl'>
+        {t('DISTINCTIVES')}
+      </h1>
+      <section className='max-w-3xl p-5 mx-auto'>
+        <h1 className='my-4 text-2xl font-semibold'>{t('D1')}</h1>
+        <p className='w-full mb-10 text-lg text-gray-500'>{t('D1P1')}</p>
+        <h1 className='my-4 text-2xl font-semibold'>{t('D2')}</h1>
+        <p className='w-full mb-10 text-lg text-gray-500'>{t('D2P1')}</p>
+        <h1 className='my-4 text-2xl font-semibold'>{t('D3')}</h1>
+        <p className='w-full mb-10 text-lg text-gray-500'>{t('D3P')}</p>
+        <h1 className='my-4 text-2xl font-semibold'>{t('D4')}</h1>
+        <p className='w-full mb-10 text-lg text-gray-500'>{t('D4P')}</p>
+        <h1 className='my-4 text-2xl font-semibold'>{t('D5')}</h1>
+        <p className='w-full mb-10 text-lg text-gray-500'>{t('D5P')}</p>
+        <h1 className='my-4 text-2xl font-semibold'>{t('D6')}</h1>
+        <p className='w-full mb-10 text-lg text-gray-500'>{t('D6P1')}</p>
+        <p className='w-full mb-10 text-lg text-gray-500'>{t('D6P2')}</p>
+        <h1 className='my-4 text-4xl font-bold'>{t('WHO_WE_ARE')}</h1>
+        <p className='w-full mb-5 text-lg text-gray-500'>
+          {t('WHO_WE_ARE_SUB')}
+        </p>
+        <p className='w-full mb-10 text-lg text-gray-500'>
+          {t('WHO_WE_ARE_SUB1')}
+        </p>
+        <div className='pl-4 mb-10 ml-5 border-l-8 border-blue-500'>
+          <p className='pl-2 font-bold'>{t('WHO_WE_ARE_SUB2')}</p>
+          <p className='pl-2 font-bold'>{t('WHO_WE_ARE_SUB3')}</p>
+          <p className='pl-2 font-bold'>{t('WHO_WE_ARE_SUB4')}</p>
+          <p className='pl-2 font-bold'>{t('WHO_WE_ARE_SUB5')}</p>
         </div>
       </section>
     </Layout>
@@ -51,7 +123,7 @@ const About = ({ t }) => {
 };
 
 About.getInitialProps = async () => ({
-  namespacesRequired: ['common'],
+  namespacesRequired: ['common', 'about'],
 });
 
-export default withTranslation()(About);
+export default withTranslation('about')(About);

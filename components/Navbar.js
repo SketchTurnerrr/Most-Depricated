@@ -10,11 +10,13 @@ const Navbar = ({ t }) => {
 
   return (
     <>
-      <nav className='flex flex-wrap items-center justify-between px-6 py-8 lg:px-16 lg:py-4 lg:flex'>
+      <nav className='flex flex-wrap items-center justify-between px-6 py-8 lg:mx-auto lg:max-w-screen-xl lg:px-16 lg:py-4 lg:flex'>
         <div className='flex items-center'>
           <Link href='/'>
             <a>
-              <span className='text-2xl font-bold'>{t('BridgeChurch')}</span>
+              <span className='text-2xl font-bold text-blue-500'>
+                {t('BC')}
+              </span>
             </a>
           </Link>
         </div>
@@ -65,19 +67,19 @@ const Navbar = ({ t }) => {
           <div className='flex flex-col items-start w-full leading-loose bg-white rounded-lg lg:bg-transparent lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto lg:items-center lg:h-auto'>
             <Link href='/ministries'>
               <a className='items-center justify-center w-full px-3 font-medium transition duration-500 ease-in-out lg:text-lg lg:inline-flex lg:w-auto hover:text-blue-500'>
-                ministries
+                {t('ministries')}
               </a>
             </Link>
 
             <Link href='/about'>
               <a className='items-center justify-center w-full px-3 font-medium transition duration-500 ease-in-out lg:text-lg lg:inline-flex lg:w-auto hover:text-blue-500'>
-                about
+                {t('about')}
               </a>
             </Link>
 
             <Link href='/listen'>
               <a className='items-center justify-center w-full px-3 font-medium transition duration-500 ease-in-out lg:inline-flex lg:w-auto lg:text-lg hover:text-blue-500'>
-                listen
+                {t('listen')}
               </a>
             </Link>
           </div>
