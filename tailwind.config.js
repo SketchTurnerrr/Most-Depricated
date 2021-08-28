@@ -3,19 +3,26 @@ module.exports = {
   darkMode: 'media', // 'media' or 'class'
   theme: {
     extend: {
-      colors: {
-        'accent-1': '#333',
-      },
+      backgroundImage: (theme) => ({
+        'hero-pattern': "url('/images/main-cover-2.jpg')",
+      }),
+
+      backgroundColor: (theme) => ({
+        ...theme('colors'),
+        almostWhite: '#fafafa',
+      }),
+
       height: {
-        vh9: '90vh',
+        xl: '800px',
+        sm: '150px',
       },
-      zIndex: {
-        '-1': '-1',
+      width: {
+        md: '900px',
       },
     },
+    variants: {
+      extend: {},
+    },
+    plugins: [],
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
 };

@@ -10,32 +10,30 @@ const Navbar = ({ t }) => {
 
   return (
     <>
-      <nav className='flex flex-wrap items-center justify-between px-6 py-8 lg:mx-auto lg:max-w-screen-xl lg:px-16 lg:py-4 lg:flex'>
+      <nav className='flex flex-wrap items-center justify-between px-6 py-8 lg:mx-auto lg:max-w-screen-xl lg:p-8'>
         <div className='flex items-center'>
           <Link href='/'>
             <a>
-              <span className='text-2xl font-bold text-blue-500'>
-                {t('BC')}
-              </span>
+              <span className='text-xl font-bold lg:text-3xl '>{t('BC')}</span>
             </a>
           </Link>
         </div>
         <div className='flex items-center'>
           <button
             onClick={() => i18n.changeLanguage((i18n.language = 'en'))}
-            className='mx-1 text-sm font-medium focus:outline-none'
+            className='mx-1 text-lg font-bold focus:text-blue-500 focus:outline-none'
           >
             EN
           </button>
           <button
             onClick={() => i18n.changeLanguage((i18n.language = 'ua'))}
-            className='mx-1 text-sm font-medium focus:text-blue-500 focus:outline-none'
+            className='mx-1 text-lg font-bold focus:text-blue-500 focus:outline-none'
           >
             UA
           </button>
           <button
             onClick={() => i18n.changeLanguage((i18n.language = 'ru'))}
-            className='mx-1 text-sm font-medium focus:outline-none'
+            className='mx-1 text-lg font-bold focus:text-blue-500 focus:outline-none'
           >
             RU
           </button>
@@ -62,23 +60,23 @@ const Navbar = ({ t }) => {
         <div
           className={`${
             active ? '' : 'hidden'
-          } w-full lg:flex lg:items-center lg:w-auto py-5 `}
+          } w-full lg:flex lg:items-center pt-4 lg:w-auto`}
         >
-          <div className='flex flex-col items-start w-full leading-loose bg-white rounded-lg lg:bg-transparent lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto lg:items-center lg:h-auto'>
+          <div className='flex flex-col items-start w-full leading-loose rounded-lg lg:bg-transparent lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto lg:items-center lg:h-auto'>
             <Link href='/ministries'>
-              <a className='items-center justify-center w-full px-3 font-medium transition duration-500 ease-in-out lg:text-lg lg:inline-flex lg:w-auto hover:text-blue-500'>
+              <a className='items-center justify-center w-full px-3 font-semibold transition duration-500 ease-in-out lg:text-lg lg:inline-flex lg:w-auto hover:text-blue-500'>
                 {t('ministries')}
               </a>
             </Link>
 
             <Link href='/about'>
-              <a className='items-center justify-center w-full px-3 font-medium transition duration-500 ease-in-out lg:text-lg lg:inline-flex lg:w-auto hover:text-blue-500'>
+              <a className='items-center justify-center w-full px-3 font-semibold transition duration-500 ease-in-out lg:text-lg lg:inline-flex lg:w-auto hover:text-blue-500'>
                 {t('about')}
               </a>
             </Link>
 
             <Link href='/listen'>
-              <a className='items-center justify-center w-full px-3 font-medium transition duration-500 ease-in-out lg:inline-flex lg:w-auto lg:text-lg hover:text-blue-500'>
+              <a className='items-center justify-center w-full px-3 font-semibold transition duration-500 ease-in-out lg:inline-flex lg:w-auto lg:text-lg hover:text-blue-500'>
                 {t('listen')}
               </a>
             </Link>
