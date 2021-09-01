@@ -7,12 +7,7 @@ const Home = ({ t }) => {
       <Layout home></Layout>
 
       {/* <-- Hero --> */}
-      <section
-        className='relative flex items-center content-center justify-center'
-        style={{
-          minHeight: '90vh',
-        }}
-      >
+      <section className='relative flex items-center content-center justify-center h-screen'>
         <div
           className='absolute w-full h-full bg-center bg-cover'
           style={{

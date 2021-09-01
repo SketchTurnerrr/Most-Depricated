@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { i18n, Link, withTranslation } from '../i18n';
-import Navbar from './Navbar';
+import Navbar2 from './Navbar2';
 
 const Layout = ({ children, t }) => {
   return (
@@ -12,8 +12,10 @@ const Layout = ({ children, t }) => {
         <meta name='og:title' content='Bridge Church' />
         <title>{t('BridgeChurch')}</title>
       </Head>
-      <Navbar />
-      <main>{children}</main>
+      {/* <Navbar /> */}
+      <Navbar2 />
+
+      <div>{children}</div>
     </>
   );
 };

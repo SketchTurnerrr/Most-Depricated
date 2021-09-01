@@ -10,7 +10,14 @@ module.exports = {
       backgroundColor: (theme) => ({
         ...theme('colors'),
         almostWhite: '#fafafa',
+        my_blue: '#E3F6F5',
       }),
+
+      textColor: (theme) => theme('colors'),
+
+      textColor: {
+        my_blue: '#E3F6F5',
+      },
 
       height: {
         xl: '800px',
