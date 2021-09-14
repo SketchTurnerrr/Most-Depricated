@@ -1,27 +1,10 @@
-import Head from 'next/head';
-import { i18n, Link, withTranslation } from '../i18n';
-import Navbar2 from './Navbar2';
+import Navbar from './Navbar';
 
-const Layout = ({ children, t }) => {
+export default function Layout({ children }) {
   return (
     <>
-      <Head>
-        <link rel='icon' href='/favicon.ico' />
-        <meta name='description' content='Bridge Church Kryvyi Rih' />
-        s
-        <meta name='og:title' content='Bridge Church' />
-        <title>{t('BridgeChurch')}</title>
-      </Head>
-      {/* <Navbar /> */}
-      <Navbar2 />
-
-      <div>{children}</div>
+      <Navbar />
+      <main>{children}</main>
     </>
   );
-};
-
-Layout.getInitialProps = async () => ({
-  namespacesRequired: ['common'],
-});
-
-export default withTranslation('common')(Layout);
+}

@@ -1,19 +1,49 @@
-import { i18n, Link, withTranslation } from '../i18n';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 import Layout from '../components/Layout';
+import Image from 'next/image';
 
-const Ministries = ({ t }) => {
+export default function Ministries() {
+  const { t } = useTranslation('ministries');
+
   return (
     <Layout>
-      <div>asd</div>
+      <div>
+        <div className='max-w-screen-xl py-24 mx-auto'>
+          <div className='flex justify-between'>
+            <div>
+              <h1 className='p-2 pb-5 text-2xl font-bold lg:text-7xl'>
+                Sunday Service
+              </h1>
+              <p className='max-w-2xl pr-4'>
+                Each Sunday we gather as the family of God, the body of Christ
+                to honor Him and worship Him through reading Scripture, singing
+                songs of praise, praying together, studying God’s Word together
+                and eating and fellowshipping together. Through these activities
+                we seek to one another in our faith so we will stay faithful to
+                Jesus Christ and be good witnesses for Him in the world during
+                the week.
+              </p>
+            </div>
+            <Image
+              className='rounded-md'
+              src='/images/SundayService.jpg'
+              alt='Worship Service'
+              height={530}
+              width={795}
+            />
+          </div>
+        </div>
+      </div>
     </Layout>
   );
-};
+}
 
-Ministries.getInitialProps = async () => ({
-  namespacesRequired: ['ministries'],
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ['ministries', 'navbar'])),
+  },
 });
-
-export default withTranslation('ministries')(Ministries);
 
 // {
 //   /* Card one */

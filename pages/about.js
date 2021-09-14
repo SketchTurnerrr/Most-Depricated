@@ -1,7 +1,9 @@
-import { i18n, Link, withTranslation } from '../i18n';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Layout from '../components/Layout';
 
-const About = ({ t }) => {
+export default function About() {
+  const { t } = useTranslation('about');
   return (
     <Layout>
       <div className='flex items-center justify-center my-10'>
@@ -120,10 +122,10 @@ const About = ({ t }) => {
       </section>
     </Layout>
   );
-};
+}
 
-About.getInitialProps = async () => ({
-  namespacesRequired: ['common', 'about'],
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ['about', 'navbar'])),
+  },
 });
-
-export default withTranslation('about')(About);

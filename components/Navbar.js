@@ -1,96 +1,176 @@
-import { i18n, Link, withTranslation } from '../i18n';
 import { useState } from 'react';
+import { useTranslation } from 'next-i18next';
+import { Transition } from '@headlessui/react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-const Navbar = ({ t }) => {
-  const [active, setActive] = useState(false);
-
-  const handleClick = () => {
-    setActive(!active);
-  };
+export default function Navbar2() {
+  const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation('navbar');
+  const router = useRouter();
 
   return (
-    <>
-      <nav className='flex flex-wrap items-center justify-between px-6 py-8 lg:mx-auto lg:max-w-screen-xl lg:p-8'>
-        <div className='flex items-center text-center'>
-          <Link href='/'>
-            <a>
-              <span className='text-xl font-bold text-center lg:text-3xl '>
-                {t('BC')}
-              </span>
-            </a>
-          </Link>
-        </div>
-        <div className='flex items-center'>
-          <button
-            onClick={() => i18n.changeLanguage((i18n.language = 'en'))}
-            className='mx-1 text-lg font-bold transition duration-500 ease-in-out hover:text-blue-500 focus:text-blue-500 focus:outline-none'
-          >
-            EN
-          </button>
-          <button
-            onClick={() => i18n.changeLanguage((i18n.language = 'ua'))}
-            className='mx-1 text-lg font-bold transition duration-500 ease-in-out hover:text-blue-500 focus:text-blue-500 focus:outline-none'
-          >
-            UA
-          </button>
-          <button
-            onClick={() => i18n.changeLanguage((i18n.language = 'ru'))}
-            className='mx-1 text-lg font-bold transition duration-500 ease-in-out hover:text-blue-500 focus:text-blue-500 focus:outline-none'
-          >
-            RU
-          </button>
-        </div>
-        <button
-          onClick={handleClick}
-          className='text-black focus:outline-none lg:hidden'
-        >
-          <svg
-            className='w-6 h-6'
-            fill='none'
-            stroke='currentColor'
-            viewBox='0 0 24 24'
-            xmlns='http://www.w3.org/2000/svg'
-          >
-            <path
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth={2}
-              d='M4 6h16M4 12h16M4 18h16'
-            />
-          </svg>
-        </button>
-        <div
-          className={`${
-            active ? '' : 'hidden'
-          } w-full lg:flex lg:items-center pt-4 lg:pt-0 lg:w-auto`}
-        >
-          <div className='flex flex-col items-start w-full leading-loose rounded-lg lg:bg-transparent lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto lg:items-center lg:h-auto'>
-            <Link href='/ministries'>
-              <a className='items-center justify-center w-full px-3 font-semibold transition duration-500 ease-in-out lg:text-lg lg:inline-flex lg:w-auto hover:text-blue-500'>
-                {t('ministries')}
-              </a>
-            </Link>
-
-            <Link href='/about'>
-              <a className='items-center justify-center w-full px-3 font-semibold transition duration-500 ease-in-out lg:text-lg lg:inline-flex lg:w-auto hover:text-blue-500'>
-                {t('about')}
-              </a>
-            </Link>
-
-            <Link href='/listen'>
-              <a className='items-center justify-center w-full px-3 font-semibold transition duration-500 ease-in-out lg:inline-flex lg:w-auto lg:text-lg hover:text-blue-500'>
-                {t('listen')}
-              </a>
-            </Link>
+    <div>
+      <nav>
+        <div className='px-4 py-3 mx-auto border-b border-blue-100 max-w-7xl sm:px-6 lg:px-8'>
+          <div className='flex items-center justify-between h-16 '>
+            <div className='flex-shrink-0'>
+              <Link href='/'>
+                <a className='text-xl font-bold lg:text-3xl'>{t('BC')}</a>
+              </Link>
+            </div>
+            {/* LANGUAGE DIV */}
+            <div className='flex items-center'>
+              <Link href='/' locale={router.locale === 'ua' ? 'en' : 'en'}>
+                <a className='mx-1 text-sm font-semibold lg:text-base hover:text-gray-500 focus:text-gray-500 focus:outline-none'>
+                  EN
+                </a>
+              </Link>
+              <Link href='/' locale={router.locale === 'en' ? 'ua' : 'ua'}>
+                <a className='mx-1 text-sm font-semibold lg:text-base hover:text-gray-500 focus:text-gray-500 focus:outline-none'>
+                  UA
+                </a>
+              </Link>
+              {/* <button
+                onClick={() => i18n.changeLanguage((i18n.language = 'ua'))}
+                className='mx-1 text-sm font-semibold lg:text-base hover:text-gray-500 focus:text-gray-500 focus:outline-none'
+              >
+                UA
+              </button>
+              <button
+                onClick={() => i18n.changeLanguage((i18n.language = 'ru'))}
+                className='mx-1 text-sm font-semibold lg:text-base hover:text-gray-500 focus:text-gray-500 focus:outline-none'
+              >
+                RU
+              </button> */}
+            </div>
+            {/* MENU LINKS */}
+            <div className='flex items-center'>
+              <div className='hidden md:block'>
+                <div className='flex items-baseline ml-10 space-x-4'>
+                  <Link href='/ministries'>
+                    <a className='px-3 py-2 text-sm font-semibold text-black lg:text-base hover:text-gray-500'>
+                      {t('ministries')}
+                    </a>
+                  </Link>
+                  <Link href='/about'>
+                    <a className='px-3 py-2 text-sm font-semibold text-black lg:text-base hover:text-gray-500'>
+                      {t('about')}
+                    </a>
+                  </Link>
+                  <Link href='/listen'>
+                    <a className='px-3 py-2 text-sm font-semibold text-gray-800 lg:text-base hover:text-gray-500'>
+                      {t('listen')}
+                    </a>
+                  </Link>
+                  <Link href='/galery'>
+                    <a className='px-3 py-2 text-sm font-semibold text-gray-800 lg:text-base hover:text-gray-500'>
+                      {t('galery')}
+                    </a>
+                  </Link>
+                  <Link href='/'>
+                    <a className='px-3 py-2 text-sm font-semibold text-gray-300 lg:text-base hover:text-gray-500'>
+                      Reports
+                    </a>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            {/* MENU BUTTON */}
+            <div className='flex -mr-2 md:hidden'>
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                type='button'
+                className='inline-flex items-center justify-center p-2 text-gray-800 rounded-md hover:text-black focus:outline-none'
+                aria-controls='mobile-menu'
+                aria-expanded='false'
+              >
+                <span className='sr-only'>Open main menu</span>
+                {!isOpen ? (
+                  <svg
+                    className='block w-6 h-6 '
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke='currentColor'
+                    aria-hidden='true'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth='2'
+                      d='M4 6h16M4 12h16M4 18h16'
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    className='block w-6 h-6'
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke='currentColor'
+                    aria-hidden='true'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth='2'
+                      d='M6 18L18 6M6 6l12 12'
+                    />
+                  </svg>
+                )}
+              </button>
+            </div>
           </div>
         </div>
+
+        <Transition
+          show={isOpen}
+          enter='transition ease-out duration-100 transform'
+          enterFrom='opacity-0 scale-95'
+          enterTo='opacity-100 scale-100'
+          leave='transition ease-in duration-75 transform'
+          leaveFrom='opacity-100 scale-100'
+          leaveTo='opacity-0 scale-95'
+        >
+          {(ref) => (
+            <div className='md:hidden' id='mobile-menu'>
+              <div ref={ref} className='px-2 pt-2 pb-3 space-y-1 sm:px-3'>
+                <Link href='/ministries'>
+                  <a className='block px-3 py-2 text-base font-semibold text-black rounded-md hover:bg-gray-700 hover:text-white'>
+                    {t('ministries')}
+                  </a>
+                </Link>
+
+                <Link href='/about'>
+                  <a className='block px-3 py-2 text-base font-semibold text-black rounded-md hover:bg-gray-700 hover:text-white'>
+                    {t('about')}
+                  </a>
+                </Link>
+
+                <Link href='/listen'>
+                  <a className='block px-3 py-2 text-base font-semibold text-black rounded-md hover:bg-gray-700 hover:text-white'>
+                    {t('listen')}
+                  </a>
+                </Link>
+
+                <Link href='/galery'>
+                  <a className='block px-3 py-2 text-base font-semibold text-black rounded-md hover:bg-gray-700 hover:text-white'>
+                    {t('galery')}
+                  </a>
+                </Link>
+
+                <a
+                  href='#'
+                  className='block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white'
+                >
+                  Reports
+                </a>
+              </div>
+            </div>
+          )}
+        </Transition>
       </nav>
-    </>
+    </div>
   );
-};
-
-Navbar.getInitialProps = async () => ({
-  namespacesRequired: ['navbar'],
-});
-
-export default withTranslation('navbar')(Navbar);
+}

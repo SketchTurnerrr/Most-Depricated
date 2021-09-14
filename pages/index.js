@@ -1,11 +1,19 @@
-import { i18n, Link, withTranslation } from '../i18n';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 import Layout from '../components/Layout';
+import Head from 'next/head';
 
-const Home = ({ t }) => {
+export default function Home() {
+  const { t } = useTranslation('common');
+
   return (
-    <>
-      <Layout home></Layout>
-
+    <Layout>
+      <Head>
+        <link rel='icon' href='/favicon.ico' />
+        <meta name='description' content='Bridge Church Kryvyi Rih' />
+        <meta name='og:title' content='Bridge Church' />
+        <title>{t('BridgeChurch')}</title>
+      </Head>
       {/* <-- Hero --> */}
       <section className='relative flex items-center content-center justify-center h-screen'>
         <div
@@ -95,12 +103,12 @@ const Home = ({ t }) => {
           </div>
         </div>
       </section>
-    </>
+    </Layout>
   );
-};
+}
 
-Home.getInitialProps = async () => ({
-  namespacesRequired: ['common', 'navbar'],
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ['common', 'navbar'])),
+  },
 });
-
-export default withTranslation('common')(Home);
