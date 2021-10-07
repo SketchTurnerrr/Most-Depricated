@@ -4,7 +4,7 @@ import { Transition } from '@headlessui/react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-export default function Navbar2() {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useTranslation('navbar');
   const router = useRouter();
@@ -22,27 +22,15 @@ export default function Navbar2() {
             {/* LANGUAGE DIV */}
             <div className='flex items-center'>
               <Link href='/' locale={router.locale === 'ua' ? 'en' : 'en'}>
-                <a className='mx-1 text-sm font-semibold lg:text-base hover:text-gray-500 focus:text-gray-500 focus:outline-none'>
+                <a className='mx-1 text-sm font-semibold lg:text-base hover:text-gray-500 focus:outline-none'>
                   EN
                 </a>
               </Link>
               <Link href='/' locale={router.locale === 'en' ? 'ua' : 'ua'}>
-                <a className='mx-1 text-sm font-semibold lg:text-base hover:text-gray-500 focus:text-gray-500 focus:outline-none'>
+                <a className='mx-1 text-sm font-semibold lg:text-base hover:text-gray-500 focus:outline-none'>
                   UA
                 </a>
               </Link>
-              {/* <button
-                onClick={() => i18n.changeLanguage((i18n.language = 'ua'))}
-                className='mx-1 text-sm font-semibold lg:text-base hover:text-gray-500 focus:text-gray-500 focus:outline-none'
-              >
-                UA
-              </button>
-              <button
-                onClick={() => i18n.changeLanguage((i18n.language = 'ru'))}
-                className='mx-1 text-sm font-semibold lg:text-base hover:text-gray-500 focus:text-gray-500 focus:outline-none'
-              >
-                RU
-              </button> */}
             </div>
             {/* MENU LINKS */}
             <div className='flex items-center'>
@@ -61,16 +49,6 @@ export default function Navbar2() {
                   <Link href='/listen'>
                     <a className='px-3 py-2 text-sm font-semibold text-gray-800 lg:text-base hover:text-gray-500'>
                       {t('listen')}
-                    </a>
-                  </Link>
-                  <Link href='/galery'>
-                    <a className='px-3 py-2 text-sm font-semibold text-gray-800 lg:text-base hover:text-gray-500'>
-                      {t('galery')}
-                    </a>
-                  </Link>
-                  <Link href='/'>
-                    <a className='px-3 py-2 text-sm font-semibold text-gray-300 lg:text-base hover:text-gray-500'>
-                      Reports
                     </a>
                   </Link>
                 </div>
@@ -133,9 +111,9 @@ export default function Navbar2() {
           leaveFrom='opacity-100 scale-100'
           leaveTo='opacity-0 scale-95'
         >
-          {(ref) => (
+          {() => (
             <div className='md:hidden' id='mobile-menu'>
-              <div ref={ref} className='px-2 pt-2 pb-3 space-y-1 sm:px-3'>
+              <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3'>
                 <Link href='/ministries'>
                   <a className='block px-3 py-2 text-base font-semibold text-black rounded-md hover:bg-gray-700 hover:text-white'>
                     {t('ministries')}
@@ -153,19 +131,6 @@ export default function Navbar2() {
                     {t('listen')}
                   </a>
                 </Link>
-
-                <Link href='/galery'>
-                  <a className='block px-3 py-2 text-base font-semibold text-black rounded-md hover:bg-gray-700 hover:text-white'>
-                    {t('galery')}
-                  </a>
-                </Link>
-
-                <a
-                  href='#'
-                  className='block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white'
-                >
-                  Reports
-                </a>
               </div>
             </div>
           )}
@@ -173,4 +138,6 @@ export default function Navbar2() {
       </nav>
     </div>
   );
-}
+};
+
+export default Navbar;

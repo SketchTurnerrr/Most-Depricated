@@ -23,8 +23,20 @@ module.exports = {
         xl: '800px',
         sm: '150px',
       },
+
       width: {
         md: '900px',
+      },
+
+      keyframes: {
+        pulse: {
+          '0%, 100%': {
+            opacity: 0.2,
+          },
+          '50%': {
+            opacity: 1,
+          },
+        },
       },
     },
     variants: {

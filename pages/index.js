@@ -12,18 +12,17 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
         <meta name='description' content='Bridge Church Kryvyi Rih' />
         <meta name='og:title' content='Bridge Church' />
-        <title>{t('BridgeChurch')}</title>
+        <title>{t('BC')}</title>
       </Head>
       {/* <-- Hero --> */}
       <section className='relative flex items-center content-center justify-center h-screen'>
         <div
           className='absolute w-full h-full bg-center bg-cover'
           style={{
-            backgroundImage: 'url(/images/main-cover-2.jpg)',
+            backgroundImage:
+              'url(https://res.cloudinary.com/deprog/image/upload/q_30/v1633624416/main-cover_rg6wvu.jpg)',
           }}
-        >
-          <span className='absolute w-full h-full bg-black opacity-30'></span>
-        </div>
+        ></div>
         <div className='container relative mx-auto'>
           <div className='flex flex-wrap items-center'>
             <div className='w-full'>
@@ -31,9 +30,9 @@ export default function Home() {
                 {t('EFCU')}
               </h1>
 
-              <h3 className='px-3 pt-4 text-2xl italic text-center text-white md:pt-16 text-shadow lg:text-4xl'>
+              <h2 className='px-3 pt-4 text-2xl italic text-center text-white md:pt-16 text-shadow lg:text-4xl'>
                 {t('goal')}
-              </h3>
+              </h2>
             </div>
           </div>
         </div>
@@ -41,21 +40,23 @@ export default function Home() {
 
       {/* <-- Location --> */}
       <section className='container mx-auto my-10'>
-        <div className='justify-center md:bg-almostWhite md:flex'>
+        <div className='justify-center md:bg-white md:flex'>
           {/* where and map div */}
           <div className='items-center md:flex md:w-full'>
             <div className='mx-5'>
-              <h1 className='mt-5 mb-2 text-4xl font-semibold md:mt-0'>
-                Where?
-              </h1>
-              <div className='font-medium text-gray-500'>
-                Khartsyzka St, 188, Kryvyi Rih, Dnipro
+              <div className='mt-5 mb-2 text-4xl font-semibold md:mt-0'>
+                {t('WHERE')}?
               </div>
-              <h1 className='mt-5 mb-2 text-4xl font-semibold'>When?</h1>
-              <div className='font-medium text-gray-500'>
-                Every Sunday at 11AM
+              <div className='font-medium text-gray-500'>{t('WHEREL')}</div>
+              <div className='mt-5 mb-2 text-4xl font-semibold'>
+                {t('WHEN')}?
               </div>
-              <h1 className='mt-5 mb-2 text-4xl font-semibold'>Contact us</h1>
+              <div className='font-medium text-gray-500'>
+                {t('EVERY_SUNDAY')}
+              </div>
+              <div className='mt-5 mb-2 text-4xl font-semibold'>
+                {t('CONTACT')}
+              </div>
               <div className='font-medium text-gray-500'>narekbc@gmail.com</div>
             </div>
 
@@ -76,38 +77,48 @@ export default function Home() {
       </section>
 
       {/* <-- LATEST SERMON --> */}
-      <section className='container p-5 mx-auto md:p-0 md:my-10 md:pb-10 '>
-        <div className='items-center md:bg-almostWhite md:flex'>
-          <img
-            className='md:w-1/4'
-            src='./images/latest-sermon.jpg'
-            alt='a book on a table'
-          />
-          <div className='items-center flex-grow p-3 md:px-10 '>
-            <h1 className='mt-5 text-4xl font-semibold md:mt-0'>
-              Latest Sermon
-            </h1>
-            <h1 className='mt-5 text-xl font-semibold'>Wisemen's Story</h1>
-            <div className='mt-2 font-medium text-gray-500'>
-              December 27, 2020
+      <div className='container mx-auto'>
+        <div className='items-center justify-center pb-4 lg:flex'>
+          <div className='w-full lg:flex'>
+            <div
+              className='flex-none h-64 overflow-hidden text-center bg-cover rounded-t lg:h-auto lg:w-96 lg:rounded-t-none lg:rounded-l'
+              style={{
+                backgroundImage: `url(https://res.cloudinary.com/deprog/image/upload/c_scale,w_550/v1633624412/JOHN_gnnzs8.jpg)`,
+                backgroundPosition: 'center',
+              }}
+              title='Gospel of John poster'
+            ></div>
+            <div className='flex flex-col justify-between p-4 leading-normal bg-white border-b border-l border-r rounded-b md:flex-grow lg:w-md border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light lg:rounded-b-none lg:rounded-r'>
+              <div className='mb-8'>
+                <div className='h-6 mb-8 text-4xl font-bold text-black'>
+                  {t('latest')}
+                </div>
+                <div className='mt-5 text-xl font-semibold'>
+                  {t('latest_title')}
+                </div>
+                <div className='mt-2 font-medium text-gray-500'>
+                  {t('OCTOBER')} 3, 2021
+                </div>
+
+                <audio
+                  className='w-full mt-5'
+                  controls='controls'
+                  preload='metadata'
+                  src='https://archive.org/download/2020-12-27/2020_12_27.mp3'
+                  type='audio/mpeg'
+                >
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
             </div>
-            <audio
-              className='w-full mt-3 border-blue-600'
-              controls='controls'
-              preload='metadata'
-              src='https://archive.org/download/2020-12-27/2020_12_27.mp3'
-              type='audio/mpeg'
-            >
-              Your browser does not support the audio element.
-            </audio>
           </div>
         </div>
-      </section>
+      </div>
     </Layout>
   );
 }
 
-export const getStaticProps = async ({ locale }) => ({
+export const getServerSideProps = async ({ locale }) => ({
   props: {
     ...(await serverSideTranslations(locale, ['common', 'navbar'])),
   },
