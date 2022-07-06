@@ -25,6 +25,6 @@
   },
   "devDependencies": {
     "autoprefixer": "9.8.6",
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.19"
   }
 }
